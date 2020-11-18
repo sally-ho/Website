@@ -1,12 +1,18 @@
 function requestContact() {
-  unloadConten()t;
-  $.ajax({url: "/public/contact.html", success: loadContent});
+  unloadContent();
+  $.ajax({url: "contact.html", success: loadContent});
 }
 
 
-function changeSomeHtml() {
-  $("#load_chocolate").innerHTML = "This is the new content";
+function loadContent (content){
+  $("#game_content").html(content);
 }
 
-$("#load_home").click(changeSomeHtml);
+function loadGame (){
+  $("#game_content").html("");
+  $.ajax({url: "game.html", success: loadContent});
+}
+
+
 $("#load_home").click(requestContact);
+$("#game_button").click(loadGame);
