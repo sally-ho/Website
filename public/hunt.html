@@ -1,0 +1,35 @@
+<style>
+  .hiddenimage{
+    width:90px;
+    height:90px;
+    background:cover;
+    opacity:0;
+  }
+  #hiddensoccer {
+    position:absolute;
+    left:77%;
+    top:45%;
+  }
+  #hiddenbanana {
+    position:absolute;
+    left:7%;
+    top:80%;
+  }
+  #hiddenduck {
+    position:absolute;
+    left:45%;
+    top:35%;
+  }
+</style>
+
+<h2>Welcome to the scavenger hunt</h2>
+<h3>Can you find the banana, the duck, and the soccer ball?</h3>
+<h3 id="foundlist">Found: 0/3</h3>
+<div class="hunt-outer-div">
+<button id="remove_game" class="remove-game-button">Close game</button>
+<img class="hiddenimage" src="soccer.png" id="hiddensoccer" onmouseout="hideImage('hiddensoccer')" onmouseover="showImage('hiddensoccer')" onclick="revealImage('hiddensoccer')"></img>
+<img class="hiddenimage" src="banana.jpg" id="hiddenbanana" onmouseout="hideImage('hiddenbanana')" onmouseover="showImage('hiddenbanana')" onclick="revealImage('hiddenbanana')"></img>
+<img class="hiddenimage" src="duck.png" id="hiddenduck" onmouseout="hideImage('hiddenduck')" onmouseover="showImage('hiddenduck')" onclick="revealImage('hiddenduck')"></img>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+<script src="hunt.js"></script>
