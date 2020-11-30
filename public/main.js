@@ -16,3 +16,14 @@ function loadGame (){
 
 $("#load_home").click(requestContact);
 $("#game_button").click(loadGame);
+$("#search_button").click(requestHuntContent);
+
+
+function requestHuntContent() {
+  $(".container").html("");
+  $.ajax({url: "hunt.html", success: loadHuntContent});
+}
+
+function loadHuntContent(content) {
+  $("#hunt_content").html(content);
+}

@@ -87,3 +87,13 @@ body {
   martin-top: -20px;
   padding-left: 50px;
 }
+
+#search_button {
+  background:url('searchimg.png');
+  background-size:cover;
+  width:100px;
+  height:30px;
+  position:absolute;
+  right:7.5%;
+  top:13%;
+}
